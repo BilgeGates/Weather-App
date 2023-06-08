@@ -14,6 +14,7 @@ async function checkWeather(city) {
     document.querySelector(".weather").style.display = "none";
   } else {
     const data = await response.json();
+    console.log(data);
     document.querySelector(".city").innerHTML = data.name;
     document.querySelector(".temp").innerHTML =
       Math.round(data.main.temp) + "℃";
@@ -23,14 +24,18 @@ async function checkWeather(city) {
 
     if (data.weather[0].main == "Clouds") {
       weatherIcon.src = "img/clouds.png";
-    } else if (data.weather[0].main == "Clean") {
+    } else if (data.weather[0].main == "Clear") {
       weatherIcon.src = "img/clear.png";
     } else if (data.weather[0].main == "Rain") {
       weatherIcon.src = "img/rain.png";
     } else if (data.weather[0].main == "Drizzle") {
-      weatherIcon.src = "img/dizzle.png";
+      weatherIcon.src = "img/drizzle.png";
     } else if (data.weather[0].main == "Mist") {
       weatherIcon.src = "img/mist.png";
+    } else if (data.weather[0].main == "Snow") {
+      weatherIcon.src = "img/snow.png";
+    } else if (data.weather[0].main == "Thunderstorm") {
+      weatherIcon.src = "img/thunderstorm.png";
     }
     document.querySelector(".weather").style.display = "block";
     document.querySelector(".error").style.display = "none";
