@@ -8,4 +8,8 @@
 
     git clone https://github.com/BilgeGates/Weather-Application.git 
 
+## Project View
+
+ <img src="../Weather-App/Leptop.jpg" alt="Weather">
+
 ## Haven a nice day!
