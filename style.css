@@ -1,13 +1,13 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: "Poppins" sans-serif;
   box-sizing: border-box;
+  font-family: "Poppins" sans-serif;
 }
 
 body {
   height: 100vh;
-  background: linear-gradient(135deg, #00feba, #5b548a);
+  background: linear-gradient(135deg, #5b548a, #00feba);
 }
 
 .card {
@@ -51,7 +51,7 @@ body {
   width: 16px;
 }
 
-.weather-icon {
+.icon {
   width: 170px;
   margin-top: 30px;
 }
@@ -75,14 +75,14 @@ body {
   margin-top: 50px;
 }
 
-.col {
+.info {
   display: flex;
   align-items: center;
   text-align: left;
   gap: 10px;
 }
 
-.col img {
+.info img {
   width: 60px;
   margin-right: 10px;
 }

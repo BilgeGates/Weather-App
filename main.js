@@ -4,7 +4,7 @@ const apiUrl =
 
 const searchBox = document.querySelector(".search input");
 const searchBtn = document.querySelector(".search button");
-const weatherIcon = document.querySelector(".weather-icon");
+const icon = document.querySelector(".icon");
 
 async function checkWeather(city) {
   const response = await fetch(apiUrl + city + `&appid=${apiKey}`);
@@ -23,19 +23,19 @@ async function checkWeather(city) {
     document.querySelector(".country").innerHTML = data.sys.country;
 
     if (data.weather[0].main == "Clouds") {
-      weatherIcon.src = "img/clouds.png";
+      icon.src = "img/clouds.png";
     } else if (data.weather[0].main == "Clear") {
-      weatherIcon.src = "img/clear.png";
+      icon.src = "img/clear.png";
     } else if (data.weather[0].main == "Rain") {
-      weatherIcon.src = "img/rain.png";
+      icon.src = "img/rain.png";
     } else if (data.weather[0].main == "Drizzle") {
-      weatherIcon.src = "img/drizzle.png";
+      icon.src = "img/drizzle.png";
     } else if (data.weather[0].main == "Mist") {
-      weatherIcon.src = "img/mist.png";
+      icon.src = "img/mist.png";
     } else if (data.weather[0].main == "Snow") {
-      weatherIcon.src = "img/snow.png";
+      icon.src = "img/snow.png";
     } else if (data.weather[0].main == "Thunderstorm") {
-      weatherIcon.src = "img/thunderstorm.png";
+      icon.src = "img/thunderstorm.png";
     }
     document.querySelector(".weather").style.display = "block";
     document.querySelector(".error").style.display = "none";
