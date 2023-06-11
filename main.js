@@ -35,7 +35,7 @@ async function checkWeather(city) {
     } else if (data.weather[0].main == "Snow") {
       icon.src = "img/snow.png";
     } else if (data.weather[0].main == "Thunderstorm") {
-      icon.src = "img/thunderstorm.png";
+      icon.src = "img/thunderstorm.jpg";
     }
     document.querySelector(".weather").style.display = "block";
     document.querySelector(".error").style.display = "none";
