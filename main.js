@@ -1,3 +1,5 @@
+// !  Weather Api and key
+
 const apiKey = "263ad5dfb05e13682538cfc54600532d";
 const apiUrl =
   "https://api.openweathermap.org/data/2.5/weather?units=metric&q=";
@@ -17,24 +19,31 @@ async function checkWeather(city) {
     console.log(data);
     document.querySelector(".city").innerHTML = data.name;
     document.querySelector(".temp").innerHTML =
-      Math.round(data.main.temp) + "℃";
+      Math.round(data.main.temp) + "°";
     document.querySelector(".humidity").innerHTML = data.main.humidity + "%";
-    document.querySelector(".wind").innerHTML = data.wind.speed + "km/h";
+    document.querySelector(".wind").innerHTML = data.wind.speed + " " + "km/h";
 
     if (data.weather[0].main == "Clouds") {
       icon.src = "img/clouds.png";
+      document.querySelector(".desc").innerHTML = data.weather[0].description;
     } else if (data.weather[0].main == "Clear") {
       icon.src = "img/clear.png";
+      document.querySelector(".desc").innerHTML = data.weather[0].description;
     } else if (data.weather[0].main == "Rain") {
       icon.src = "img/rain.png";
+      document.querySelector(".desc").innerHTML = data.weather[0].description;
     } else if (data.weather[0].main == "Drizzle") {
       icon.src = "img/drizzle.png";
+      document.querySelector(".desc").innerHTML = data.weather[0].description;
     } else if (data.weather[0].main == "Mist") {
       icon.src = "img/mist.png";
+      document.querySelector(".desc").innerHTML = data.weather[0].description;
     } else if (data.weather[0].main == "Snow") {
       icon.src = "img/snow.png";
+      document.querySelector(".desc").innerHTML = data.weather[0].description;
     } else if (data.weather[0].main == "Thunderstorm") {
       icon.src = "img/thunderstorm.jpg";
+      document.querySelector(".desc").innerHTML = data.weather[0].description;
     }
     document.querySelector(".weather").style.display = "block";
     document.querySelector(".error").style.display = "none";
@@ -52,3 +61,15 @@ const getCityName = (e) => {
 };
 
 searchBox.addEventListener("keydown", getCityName);
+
+// ! Date and Time
+
+const API_URL = "https://worldtimeapi.org/api/timezone";
+
+async function checkDateTime() {
+  const res = await fetch(API_URL);
+  const d = await res.json();
+  console.log(d);
+}
+
+checkDateTime();
