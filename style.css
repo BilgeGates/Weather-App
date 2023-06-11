@@ -75,7 +75,7 @@ body {
   margin-top: 50px;
 }
 
-.info {
+/* .info {
   display: flex;
   align-items: center;
   text-align: left;
@@ -85,11 +85,10 @@ body {
 .info img {
   width: 60px;
   margin-right: 10px;
-}
+} */
 
 .humidity,
-.wind,
-.country {
+.wind {
   font-size: 68px;
   margin-top: -6px;
 }
