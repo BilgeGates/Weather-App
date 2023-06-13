@@ -61,15 +61,3 @@ const getCityName = (e) => {
 };
 
 searchBox.addEventListener("keydown", getCityName);
-
-// ! Date and Time
-
-// const API_URL = "https://worldtimeapi.org/api/timezone";
-
-// async function checkDateTime() {
-//   const res = await fetch(API_URL);
-//   const d = await res.json();
-//   console.log(d);
-// }
-
-// checkDateTime();
